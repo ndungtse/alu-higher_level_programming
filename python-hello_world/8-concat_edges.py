@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-word = "object-oriented programming with Python"
-# rebuild the sentence using slices of word only
-word = word[:15] + word[15:31] + word[31:]
-print(word)
+str = "Python is an interpreted, interactive, object-oriented programming\
+ language that combines remarkable power with very clear syntax"
+str = str[39:66] + str[106:112] + str[0:6]
+print(str)
