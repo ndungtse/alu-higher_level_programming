@@ -32,3 +32,8 @@ Connecting Python to a MySQL database two ways: first directly with the
 | `13-model_state_delete_a.py` | SQLAlchemy | Delete states containing `a` |
 | `model_city.py` | SQLAlchemy | `City` model for the `cities` table |
 | `14-model_city_fetch_by_state.py` | SQLAlchemy | All cities with their state |
+| `relationship_state.py` | SQLAlchemy | `State` with a cascading `cities` relationship (advanced) |
+| `relationship_city.py` | SQLAlchemy | `City` with a `state` backref (advanced) |
+| `100-relationship_states_cities.py` | SQLAlchemy | Create a state + city via the relationship (advanced) |
+| `101-relationship_states_cities_list.py` | SQLAlchemy | List states with their cities (advanced) |
+| `102-relationship_cities_states_list.py` | SQLAlchemy | List cities with their state (advanced) |
