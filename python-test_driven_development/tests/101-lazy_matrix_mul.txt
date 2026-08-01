@@ -1,0 +1,18 @@
+The ``101-lazy_matrix_mul`` module
+==================================
+
+Using ``lazy_matrix_mul``
+-------------------------
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Multiplying two square matrices:
+
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))  # doctest: +NORMALIZE_WHITESPACE
+    [[ 7 10]
+     [15 22]]
+
+Multiplying non-square but compatible matrices:
+
+    >>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13 16]]

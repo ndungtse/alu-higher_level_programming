@@ -1,0 +1,63 @@
+The ``100-matrix_mul`` module
+=============================
+
+Using ``matrix_mul``
+--------------------
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Multiplying two square matrices:
+
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    [[7, 10], [15, 22]]
+
+Multiplying non-square but compatible matrices:
+
+    >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    [[13, 16]]
+
+A non-list ``m_a`` raises a TypeError:
+
+    >>> matrix_mul("Holberton", [[1, 2]])
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+A non-list ``m_b`` raises a TypeError:
+
+    >>> matrix_mul([[1, 2]], "Holberton")
+    Traceback (most recent call last):
+    TypeError: m_b must be a list
+
+``m_a`` that is not a list of lists raises a TypeError:
+
+    >>> matrix_mul([1, 2], [[1, 2]])
+    Traceback (most recent call last):
+    TypeError: m_a must be a list of lists
+
+An empty ``m_a`` raises a ValueError:
+
+    >>> matrix_mul([], [[1, 2]])
+    Traceback (most recent call last):
+    ValueError: m_a can't be empty
+
+    >>> matrix_mul([[]], [[1, 2]])
+    Traceback (most recent call last):
+    ValueError: m_a can't be empty
+
+Non-numeric elements raise a TypeError:
+
+    >>> matrix_mul([[1, 2], [3, "4"]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    TypeError: m_a should contain only integers or floats
+
+A non-rectangular ``m_a`` raises a TypeError:
+
+    >>> matrix_mul([[1, 2], [3]], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    TypeError: each row of m_a must be of the same size
+
+Incompatible dimensions raise a ValueError:
+
+    >>> matrix_mul([[1, 2]], [[1, 2]])
+    Traceback (most recent call last):
+    ValueError: m_a and m_b can't be multiplied

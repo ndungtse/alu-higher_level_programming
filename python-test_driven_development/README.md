@@ -34,3 +34,5 @@ python3 -m unittest tests.6-max_integer_test
 | `4-print_square.py` | `tests/4-print_square.txt` | Print a `#` square |
 | `5-text_indentation.py` | `tests/5-text_indentation.txt` | Break text after `.`, `?`, `:` |
 | `6-max_integer.py` | `tests/6-max_integer_test.py` | Max of a list (unittest) |
+| `100-matrix_mul.py` | `tests/100-matrix_mul.txt` | Multiply two matrices (advanced) |
+| `101-lazy_matrix_mul.py` | `tests/101-lazy_matrix_mul.txt` | Multiply matrices with NumPy (advanced) |
