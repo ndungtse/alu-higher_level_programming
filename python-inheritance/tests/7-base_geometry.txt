@@ -20,8 +20,9 @@ Import the class:
 
     >>> bg.integer_validator("my_int", 12)
     >>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("age", 1)
 
-A non-integer raises a TypeError:
+A string is not an integer:
 
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
@@ -42,6 +43,41 @@ A bool is not accepted as an integer:
     ...
     TypeError: flag must be an integer
 
+A list is not an integer:
+
+    >>> bg.integer_validator("age", [3])
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+A tuple is not an integer:
+
+    >>> bg.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+A set is not an integer:
+
+    >>> bg.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+A dict is not an integer:
+
+    >>> bg.integer_validator("age", {"a": 1})
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
+None is not an integer:
+
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+
 Zero is not greater than 0:
 
     >>> bg.integer_validator("age", 0)
@@ -56,9 +92,16 @@ A negative value is not greater than 0:
     ...
     ValueError: distance must be greater than 0
 
-A tuple is not an integer:
+Calling with only the name (missing value) raises a TypeError:
 
-    >>> bg.integer_validator("size", (1, 2))
+    >>> bg.integer_validator("age")  # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
     ...
-    TypeError: size must be an integer
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Calling with no arguments raises a TypeError:
+
+    >>> bg.integer_validator()  # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
