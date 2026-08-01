@@ -33,3 +33,8 @@ across multiple tables with subqueries and `JOIN`s.
 | `14-my_genres.sql` | Genres of the show Dexter |
 | `15-comedy_only.sql` | All Comedy shows |
 | `16-shows_by_genre.sql` | All shows with all linked genres |
+| `100-not_my_genres.sql` | Genres not linked to Dexter |
+| `101-not_a_comedy.sql` | Shows without the Comedy genre |
+| `102-rating_shows.sql` | Shows by total rating |
+| `103-rating_genres.sql` | Genres by total rating |
+| `blog_post.md` | Task 21 blog: "How Do SQL Database Engines Work?" |
