@@ -33,3 +33,7 @@ selecting, updating, deleting and aggregating data.
 | `14-average.sql` | Compute the average score |
 | `15-groups.sql` | Count records per score |
 | `16-no_link.sql` | List records that have a name |
+| `100-move_to_utf8.sql` | Convert `hbtn_0c_0`/`first_table` to utf8mb4 |
+| `101-avg_temperatures.sql` | Average temperature by city |
+| `102-top_city.sql` | Top 3 cities by temperature (Jul/Aug) |
+| `103-max_state.sql` | Max temperature per state |
