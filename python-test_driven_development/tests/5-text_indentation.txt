@@ -1,0 +1,32 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Two newlines are printed after each ``.``, ``?`` and ``:``:
+
+    >>> text_indentation("Hello. How are you? Fine: thanks")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Fine:
+    <BLANKLINE>
+    thanks
+
+Leading and trailing spaces of each line are stripped:
+
+    >>> text_indentation("   Hi.   Bye.   ")
+    Hi.
+    <BLANKLINE>
+    Bye.
+    <BLANKLINE>
+
+A non-string argument raises a TypeError:
+
+    >>> text_indentation(42)
+    Traceback (most recent call last):
+    TypeError: text must be a string
