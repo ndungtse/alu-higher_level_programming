@@ -24,20 +24,20 @@ if __name__ == "__main__":
     try:
         for line in sys.stdin:
             parts = line.split()
-            if len(parts) >= 2:
-                try:
-                    total_size += int(parts[-1])
-                except ValueError:
-                    pass
-                try:
-                    code = int(parts[-2])
-                    if code in valid_codes:
-                        status_counts[code] = status_counts.get(code, 0) + 1
-                except ValueError:
-                    pass
+            try:
+                total_size += int(parts[-1])
+            except (IndexError, ValueError):
+                pass
+            try:
+                code = int(parts[-2])
+                if code in valid_codes:
+                    status_counts[code] = status_counts.get(code, 0) + 1
+            except (IndexError, ValueError):
+                pass
             line_count += 1
             if line_count % 10 == 0:
                 print_stats(total_size, status_counts)
+        print_stats(total_size, status_counts)
     except KeyboardInterrupt:
         print_stats(total_size, status_counts)
         raise
